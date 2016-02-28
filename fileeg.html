@@ -1,0 +1,23 @@
+<head>
+ <title>fileeg</title>
+</head>
+<body>
+ <h1>Welcome to Meteor!</h1>
+{{> home}}
+</body>
+<template name="home">
+<input class="your-upload-class" type="file">
+
+  <table class="table table-condensed">
+        <tbody>
+        {{#each theFiles}}
+        <tr>
+    <td>{{uploadedAt}}</td><td>{{original.name}}</td><td><a
+ href="{{url}}">link</a></td><td>{{#if 
+isUploaded}}uploaded{{/if}}</td><td><button 
+id="deleteFileButton">delete</button></td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+  </template>
